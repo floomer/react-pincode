@@ -1,0 +1,15 @@
+.sm{
+    padding: 4px;
+}
+.md{
+    padding: 6px;
+}
+.xl{
+    padding: 8px;
+}
+.default{
+    background-color: aqua;
+}
+.accent{
+    background-color: blue;
+}

@@ -1,0 +1,12 @@
+.pinCodeInput{
+    width: 300px;
+    height: 30px;
+    border: 2px solid teal;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.invalid{
+    border-color: red;
+}

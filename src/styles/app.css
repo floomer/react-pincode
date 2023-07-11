@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Athelas;
+    src: url("//utils/fonts/Athelas");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Athelas, serif;
+}
+body{
+    background-color: #2E3440;
+}
+#root{
+    display: flex;
+    justify-content: center;
+
+}
+.App{
+    margin-top: 250px;
+}
+
+.pinCode-form{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: whitesmoke;
+    border: 3px solid teal;
+    border-radius: 16px;
+}
+.login-form{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: whitesmoke;
+    border: 3px solid teal;
+    border-radius: 16px;
+}
