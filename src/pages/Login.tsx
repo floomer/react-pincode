@@ -1,15 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SubmitButton from "../components/UI/button/SubmitButton";
 import PinInputGrid from "../components/UI/input/PinInputGrid";
+import {MyModal} from "../components/UI/MyModal/MyModal";
 
 const Login = () => {
-    const pincode = localStorage.getItem('pincode')
-    if (pincode !== null){
+    const userPincode = localStorage.getItem('pincode')
+    const [pincode, setPincode] = useState({})
+    const [modal, setModal] = useState(false)
+    const pincodeToString = Object.values(pincode).join('')
+    if (userPincode !== null){
         return (
             <div className={'login-form'}>
                 <h2>Enter your Pin-Code</h2>
-                <PinInputGrid pincode = {pincode}/>
-                <SubmitButton onClick={() => {}}/>
+                <PinInputGrid userPincode = {userPincode}  pincode={pincode} setPincode={setPincode} />
+                <SubmitButton onClick={() =>  setModal(true) }/>
+                <MyModal userPincode={userPincode} pincodeToString={pincodeToString} visible = {modal} setVisible = {setModal}/>
             </div>
         );
     } else {
