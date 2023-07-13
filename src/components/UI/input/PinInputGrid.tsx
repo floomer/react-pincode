@@ -1,4 +1,4 @@
-import React, {ChangeEvent, ChangeEventHandler, FC, useRef} from 'react';
+import React, { FC, useRef} from 'react';
 import classes from './PinInputGrid.module.css'
 
 interface PinInputGridProps {
@@ -14,10 +14,12 @@ const PinInputGrid:FC<PinInputGridProps> = ({pincode}) => {
             ref.focus()
         }
     }
+
     return (
         <div className={classes.PinInputGrid}>
             {arrayOfInputs.map((element,index) => <input
                 key ={index}
+                maxLength={1}
                 ref={element => {
                     if (element){
                         inputRef.current[index] = element
@@ -29,10 +31,10 @@ const PinInputGrid:FC<PinInputGridProps> = ({pincode}) => {
                         setInputFocus(index + 1)
                     }
                     if (value === ''){
+                        setInputFocus(index)
                         setInputFocus(index - 1)
                     }
                 }}
-                maxLength={1}
             ></input>)}
         </div>
     );

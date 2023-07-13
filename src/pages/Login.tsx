@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import SubmitButton from "../components/UI/button/SubmitButton";
 import PinInputGrid from "../components/UI/input/PinInputGrid";
 
 const Login = () => {
     const pincode = localStorage.getItem('pincode')
-    const [pincode1, setPincode1] = useState([])
     if (pincode !== null){
         return (
             <div className={'login-form'}>
