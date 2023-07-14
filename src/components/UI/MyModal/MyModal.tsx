@@ -1,6 +1,6 @@
 import React, {Dispatch, SetStateAction} from 'react';
 import classes from "./MyModal.module.css";
-import SubmitButton from "../button/SubmitButton";
+import {SubmitButton} from "../button/SubmitButton";
 
 
 interface MyModalProps {
@@ -11,10 +11,12 @@ interface MyModalProps {
 }
 
 export const MyModal: React.FC<MyModalProps> = ({
-                                                    userPincode,
-                                                    pincodeToString,
-                                                    visible,
-                                                    setVisible}) => {
+
+    userPincode,
+    pincodeToString,
+    visible,
+    setVisible}) => {
+
     const rootClasses = [classes.myModal]
     if (visible){
         rootClasses.push(classes.active)

@@ -1,4 +1,4 @@
-import React, {ButtonHTMLAttributes, ChangeEvent, FC, MouseEvent} from 'react';
+import React, {FC, MouseEvent} from 'react';
 import classes from "./SubmitButton.module.css";
 
 
@@ -6,10 +6,8 @@ interface SubmitButtonProps {
     onClick: (e:MouseEvent<HTMLButtonElement>) => void,
 }
 
-const SubmitButton:FC<SubmitButtonProps> = (props) => {
+export const SubmitButton:FC<SubmitButtonProps> = ({onClick}) => {
     return (
-        <button className={`${classes.submitButton}`} onClick={props.onClick}>Submit</button>
+        <button className={`${classes.submitButton}`} onClick={onClick}>Submit</button>
     );
 };
-
-export default SubmitButton;

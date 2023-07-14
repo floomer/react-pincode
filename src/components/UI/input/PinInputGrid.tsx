@@ -3,11 +3,11 @@ import classes from './PinInputGrid.module.css'
 
 interface PinInputGridProps {
     userPincode: string;
-    pincode: {}
+    pincode: {[index: number]: number}
     setPincode: Dispatch<SetStateAction<{}>>
 }
 
-const PinInputGrid:FC<PinInputGridProps> = ({userPincode, setPincode, pincode}) => {
+export const PinInputGrid:FC<PinInputGridProps> = ({userPincode, setPincode, pincode}) => {
     const arrayOfInputs = Array.from(userPincode)
 
     return (
@@ -33,5 +33,3 @@ const PinInputGrid:FC<PinInputGridProps> = ({userPincode, setPincode, pincode}) 
         </div>
     );
 };
-
-export default PinInputGrid;

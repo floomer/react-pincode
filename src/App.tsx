@@ -1,10 +1,10 @@
 import React from 'react';
-import PinCodeForm from "./pages/pinCodeForm";
-import './styles/app.css'
+import {PinCodeForm} from "./pages/pinCodeForm";
+import './styles/app.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Login from "./pages/Login";
+import {Login} from "./pages/Login";
 
-const App = () => {
+export const App = () => {
     return(
         <BrowserRouter>
         <div className={"App"}>
@@ -16,5 +16,3 @@ const App = () => {
         </BrowserRouter>
     );
 };
-
-export default App;

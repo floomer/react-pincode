@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import SubmitButton from "../components/UI/button/SubmitButton";
-import PinInputGrid from "../components/UI/input/PinInputGrid";
+import {SubmitButton} from "../components/UI/button/SubmitButton";
+import {PinInputGrid} from "../components/UI/input/PinInputGrid";
 import {MyModal} from "../components/UI/MyModal/MyModal";
 
-const Login = () => {
+export const Login = () => {
     const userPincode = localStorage.getItem('pincode')
     const [pincode, setPincode] = useState({})
     const [modal, setModal] = useState(false)
@@ -28,5 +28,3 @@ const Login = () => {
     }
 
 };
-
-export default Login;

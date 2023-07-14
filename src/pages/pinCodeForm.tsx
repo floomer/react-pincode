@@ -1,12 +1,9 @@
 import React, {useState} from 'react';
 import PinCodeInput from "../components/UI/input/PinCodeInput";
-import SubmitButton from "../components/UI/button/SubmitButton";
+import {SubmitButton} from "../components/UI/button/SubmitButton";
 import {useNavigate} from "react-router-dom";
 
-
-// interface PinCodeFormProps{}
-
-const PinCodeForm = () => {
+export const PinCodeForm = () => {
     const navigate = useNavigate()
     const [pincode, setPincode] = useState('')
     const [isInvalid, setIsInvalid] = useState(false)
@@ -34,5 +31,3 @@ const PinCodeForm = () => {
         </div>
     );
 };
-
-export default PinCodeForm;
